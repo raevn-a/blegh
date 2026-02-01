@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will u be my Valentine bbg???? 😉</title>
+<style>
+* { box-sizing: border-box; margin:0; padding:0; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #6a0dad, #10b981);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #f0fdf4;
+  cursor: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='22' font-size='22'>💚</text></svg>") 16 16, auto;
+}
+
+.no-counter {
+  position: fixed;
+  top: 12px;
+  left: 14px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  z-index: 999;
+}
+
+.card {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  padding: 40px;
+  border-radius: 28px;
+  text-align: center;
+  max-width: 520px;
+  width: 95%;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+}
+
+h1 { font-size: 2.3rem; margin-bottom: 6px; }
+.gif-container { margin-bottom: 16px; min-height: 140px; }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+#yesBtn { background: #d1fae5; color: #064e3b; }
+#noBtn { background: #6b7280; color: #f0fdf4; }
+
+.result, .final-gif { display: none; margin-top: 28px; }
+
+.heart {
+  position: fixed;
+  font-size: 22px;
+  pointer-events: none;
+  animation: floatUp 4s ease forwards;
+}
+.confetti {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  animation: fall 8s linear forwards;
+}
+
+.funny-text {
+  font-size: 1rem;
+  margin: 12px 0 24px 0;
+  opacity: 0.9;
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  margin-top: 20px;
+  opacity: 0.75;
+}
+
+.spotify-container {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.spotify-note {
+  font-size: 0.8rem;
+  margin-top: 6px;
+  opacity: 0.75;
+}
+
+@keyframes floatUp { from { transform: translateY(0); opacity:1;} to { transform: translateY(-220px); opacity:0;} }
+@keyframes fall { 
+  0% { transform: translate(0,-20px) rotate(0deg);}
+  25% { transform: translate(50px,100px) rotate(90deg);}
+  50% { transform: translate(-80px,200px) rotate(180deg);}
+  75% { transform: translate(100px,300px) rotate(270deg);}
+  100% { transform: translate(0,400px) rotate(360deg);}
+}
+</style>
+</head>
+<body>
+
+<div class="no-counter" id="noCounter">0</div>
+
+<div class="card">
+  <h1>Will u be my Valentine bbg???? 😉</h1>
+  
+  <div class="funny-text">Imagine me offering you cookies but they’re invisible 🍪😌</div>
+
+  <!-- GIF container -->
+  <div class="gif-container" id="gifContainer">
+    <!-- Initial: Stickman with rose -->
+    <div class="tenor-gif-embed" data-postid="2486346918051960382" data-share-method="host" data-aspect-ratio="1.14444" data-width="100%">
+      <a href="https://tenor.com/view/funny-rose-rose-flower-stick-man-stick-figure-gif-2486346918051960382">Funny Rose Meme</a>
+    </div>
+  </div>
+
+  <div class="buttons" id="buttons">
+    <button id="yesBtn">Yes 💚</button>
+    <button id="noBtn">No</button>
+  </div>
+
+  <!-- Yes result GIF -->
+  <div class="result" id="result">
+    <div class="tenor-gif-embed" data-postid="16606050094708454978" data-share-method="host" data-aspect-ratio="1.02469" data-width="100%">
+      <a href="https://tenor.com/view/cat-gif-16606050094708454978">Cat Sticker</a>
+    </div>
+  </div>
+
+  <!-- Second Head Pat GIF page -->
+  <div class="final-gif" id="finalGif">
+    <div class="tenor-gif-embed" data-postid="24771320" data-share-method="host" data-aspect-ratio="0.55" data-width="80%">
+      <a href="https://tenor.com/view/head-pat-good-boy-cat-cute-cat-ily-gif-24771320">Head Pat Good Boy GIF</a>
+    </div>
+  </div>
+
+ <div class="spotify-container">
+  <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6IPwKM3fUUzlElbvKw2sKl?utm_source=generator&t=45" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+  </iframe>
+  <div class="spotify-note">(play at 0:45)</div>
+</div>
+
+  <div class="footer-text">bleghhh</div>
+</div>
+
+<script async src="https://tenor.com/embed.js"></script>
+
+<script>
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const noCounter = document.getElementById("noCounter");
+const result = document.getElementById("result");
+const gifContainer = document.getElementById("gifContainer");
+const buttonsDiv = document.getElementById("buttons");
+const finalGif = document.getElementById("finalGif");
+
+let noCount = 0;
+
+// Move No button
+function moveNoButton(e) {
+  let mouseX = e.clientX || (e.touches ? e.touches[0].clientX : 0);
+  let mouseY = e.clientY || (e.touches ? e.touches[0].clientY : 0);
+
+  const rect = noBtn.getBoundingClientRect();
+  const gifRect = gifContainer.getBoundingClientRect();
+
+  const distX = mouseX - (rect.left + rect.width/2);
+  const distY = mouseY - (rect.top + rect.height/2);
+  const distance = Math.sqrt(distX*distX + distY*distY);
+
+  if(distance < 120){
+    noCount++;
+    noCounter.innerText = noCount;
+
+    // Replace GIF with Computer Stick Man
+    gifContainer.innerHTML = `<div class="tenor-gif-embed" data-postid="26257333" data-share-method="host" data-aspect-ratio="1.24031" data-width="100%">
+      <a href="https://tenor.com/view/computer-stick-man-blinking-eyes-eyes-blink-9gag-gif-26257333">Computer Stick Man GIF</a>
+    </div>`;
+    const script = document.createElement("script");
+    script.src = "https://tenor.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Move button far but stay inside screen & avoid GIF, no side scroll
+    let newX, newY;
+    do {
+      newX = Math.random() * (window.innerWidth - rect.width - 20); 
+      newY = Math.random() * (window.innerHeight*0.8 - rect.height);
+    } while (
+      newX < gifRect.right + 20 && newX + rect.width > gifRect.left - 20 &&
+      newY < gifRect.bottom + 20 && newY + rect.height > gifRect.top - 20
+    );
+
+    noBtn.style.position = "fixed";
+    noBtn.style.left = newX + "px";
+    noBtn.style.top = newY + "px";
+  }
+}
+
+document.addEventListener("mousemove", moveNoButton);
+document.addEventListener("touchmove", moveNoButton);
+
+// Yes button
+yesBtn.addEventListener("click", () => {
+  buttonsDiv.style.display = "none";
+  result.style.display = "block";
+  gifContainer.innerHTML = ""; // Remove previous GIF
+  hearts();
+  confetti();
+
+  // After 4 sec show final head pat GIF with hearts/confetti
+  setTimeout(() => {
+    result.style.display = "none";
+    finalGif.style.display = "block";
+    hearts();
+    confetti();
+  }, 4000);
+});
+
+// Hearts animation
+function hearts() {
+  for(let i=0;i<40;i++){
+    const h = document.createElement("div");
+    h.className="heart";
+    h.innerText="💚";
+    h.style.left=Math.random()*window.innerWidth+"px";
+    h.style.bottom="20px";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),6000);
+  }
+}
+
+// Confetti animation
+function confetti() {
+  const colors = ["#d1fae5","#6ee7b7","#ecfdf5","#fde68a","#f87171","#fbbf24","#a78bfa","#f472b6","#34d399","#22c55e","#f43f5e"];
+  for(let i=0;i<100;i++){
+    const c = document.createElement("div");
+    c.className="confetti";
+    c.style.left=Math.random()*window.innerWidth+"px";
+    c.style.top=Math.random()*-100+"px";
+    c.style.background = colors[Math.floor(Math.random()*colors.length)];
+    c.style.transform = `rotate(${Math.random()*360}deg)`;
+    document.body.appendChild(c);
+    let vx = (Math.random()-0.5)*10;
+    let vy = Math.random()*6 + 4;
+    let rotation = Math.random()*360;
+    let gravity = 0.5;
+    let elem = c;
+    let posX = parseFloat(c.style.left);
+    let posY = parseFloat(c.style.top);
+    let anim = setInterval(() => {
+      posX += vx;
+      posY += vy;
+      rotation += 5;
+      elem.style.left = posX + "px";
+      elem.style.top = posY + "px";
+      elem.style.transform = `rotate(${rotation}deg)`;
+      vy += gravity*0.1;
+      if(posY > window.innerHeight){ clearInterval(anim); elem.remove(); }
+    },16);
+  }
+}
+</script>
+</body>
+</html>
